@@ -1,0 +1,2 @@
+enable plc MotorHomePLC
+enable bgcplc 1

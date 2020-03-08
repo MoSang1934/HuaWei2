@@ -1,0 +1,53 @@
+open prog 1
+abs
+linear
+x 0 y 0
+ta 1000
+ts 500
+F 40000
+frax(x,y)
+while(1)
+{
+x 0 y -6000000 F 40000
+dwell 500
+x -840000 F 40000
+dwell 500
+x 390000 F 40000
+dwell 2000
+x 0 y 0 F 40000
+dwell 2000
+}
+
+close
+
+open prog 2
+abs
+linear
+ta 1000
+ts 500
+x 0 y 0 xx 0 yy 0
+dwell 0
+frax(x,y,xx,yy)
+F 40000
+while (1)
+{
+x 0 y 360000
+dwell 2000
+x -2849840
+dwell 2000
+xx 2994000 yy 0
+dwell 2000
+yy 1803970
+dwell 2000
+yy 0
+dwell 2000
+y -332700
+dwell 2000
+y 360000
+dwell 2000
+x 0
+dwell 2000
+xx 0
+dwell 2000
+}
+close

@@ -1,0 +1,11 @@
+Motor[24].ServoCtrl=1                                      
+Motor[24].pEnc=EncTable[24].a
+Motor[24].pEnc2=EncTable[24].a
+
+Motor[25].ServoCtrl=1                                      
+Motor[25].pEnc=EncTable[25].a
+Motor[25].pEnc2=EncTable[25].a
+
+Motor[26].ServoCtrl=1                                      
+Motor[26].pEnc=EncTable[26].a
+Motor[26].pEnc2=EncTable[26].a

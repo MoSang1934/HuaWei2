@@ -1,0 +1,30 @@
+
+undefine all
+&1//ÒÆÔØ
+#1->X
+#2->Y
+
+//#28->w
+
+&2//ÌùÆ¬
+#5->X
+#6->Y
+#3->XX
+#4->YY
+
+
+/*
+&3//µã½º
+#3->X
+#4->Y
+*/
+
+Coord[1].AltFeedRate = 0,0,0//10,10,10
+Coord[1].FeedTime=1
+Coord[2].FeedTime=1
+Coord[3].FeedTime=1
+
+Coord[1].SegMoveTime = 10,10,10
+Coord[1].HomeRequired=1
+Coord[2].HomeRequired=1
+Coord[3].HomeRequired=1

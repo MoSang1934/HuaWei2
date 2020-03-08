@@ -1,0 +1,101 @@
+open subprog JiaZhuaHome(motor_num,homevel,polarity)
+local index;
+Ldata.motor=motor_num;
+index=motor_num;
+if(polarity==1)
+{
+	Motor[index].HomeVel=-abs(homevel);
+}
+else
+{
+	Motor[index].HomeVel=abs(homevel);
+}
+if(Motor[index].AmpFault==1)
+{
+	JZDJ_RESET=1
+	call Timer.sec(1)
+	JZDJ_RESET=0
+	call Timer.sec(0.5)
+}
+	switch(HomeStatus(index))
+	{
+		case 0:
+			HomeStatus(index)=1;
+		break;
+		case 1:
+			jog/
+			Call Timer.sec(0.1)
+			HTimer(index)=Sys.Time;
+			HomeStatus(index)=2;
+		break;
+		case 2:
+			if((Sys.Time-HTimer(index))<5 && Motor[index].AmpEna!=1)
+			{
+				HomeStatus(index)=2
+				jog/
+				Call Timer.sec(0.1)
+			}
+			else if((Sys.Time-HTimer(index))<5 && Motor[index].AmpEna==1)
+			{
+				HomeStatus(index)=7
+			}
+			else
+			{
+				HomeStatus(index)=255
+			}
+		break;
+		case 3:
+		break;
+		case 4:
+		break;
+		case 5:
+		break;
+		case 6:
+		break;
+		case 7:
+			home
+			HTimer(index)=Sys.Time;
+			Call Timer.sec(0.1)
+			if(Motor[index].HomeInProgress==1)
+			{
+			HomeStatus(index)=8;
+			}
+			else if(Motor[index].HomeComplete!=1)
+			{
+			HomeStatus(index)=7;
+			}
+			else
+			{
+			HomeStatus(index)=8;
+			}
+		break;
+		case 8:
+			if((Sys.Time-HTimer(index))<120 && Motor[index].HomeComplete!=1)
+			{
+				HomeStatus(index)=8
+			}
+			else if((Sys.Time-HTimer(index))<120 && Motor[index].HomeComplete==1)
+			{
+				HomeStatus(index)=9
+			}
+			else
+			{
+				HomeStatus(index)=255
+			}
+		break;
+		case 9:
+			HomeStatus(index)=254
+			HomeStatus(index)=0
+			HomeMotor(index)=0
+		break;
+		case 255:
+		HomeMotor(index)=0
+		break;
+		default:
+		break;
+	}
+   return;
+close
+
+
+

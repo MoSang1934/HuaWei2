@@ -1,0 +1,112 @@
+/***************************************************/
+/*polarity为1，先寻正限位，反向寻零
+/*polarity为0，先寻负限位，正向寻零
+/***************************************************/
+open plc MotorHomePLC
+HomeMotorAll=0;
+HomeStatus(1),20=0;
+HomeMotor(1),27=0;
+while(1)
+{
+	if(HomeMotor(1)==1)
+	{
+	call EcatMotorHome(1,HomeVel(1),HomePolarity(1))//移载X
+	}
+	if(HomeMotor(2)==1)
+	{
+	call EcatMotorHome(2,HomeVel(2),HomePolarity(2))//移载Y
+	}
+	if(HomeMotor(3)==1)
+	{
+	call EcatMotorHome(3,HomeVel(3),HomePolarity(3))//蘸胶X
+	}
+	if(HomeMotor(4)==1)
+	{
+	call EcatMotorHome(4,HomeVel(4),HomePolarity(4))//蘸胶Y
+	}
+	if(HomeMotor(5)==1)
+	{
+	call EcatMotorHome(5,HomeVel(5),HomePolarity(5))//贴片X
+	}
+	if(HomeMotor(6)==1)
+	{
+	call EcatMotorHome(6,HomeVel(6),HomePolarity(6))//贴片Y
+	}
+	if(HomeMotor(7)==1)
+	{
+	call EcatMotorHome(7,HomeVel(7),HomePolarity(7))//中转台
+	}
+	if(HomeMotor(8)==1)
+	{
+	call EcatMotorHome(8,HomeVel(8),HomePolarity(8))//传送夹爪
+	}
+	if(HomeMotor(9)==1)
+	{
+	call ElmoMotorHome(9,HomeVel(9),HomePolarity(9))//移载R
+	}
+	if(HomeMotor(10)==1)
+	{
+	call ElmoMotorHome(10,HomeVel(10),HomePolarity(10))//移载DD
+	}
+	if(HomeMotor(11)==1)
+	{
+	call ElmoMotorHome(11,HomeVel(11),HomePolarity(11))//蘸胶R
+	}
+	if(HomeMotor(12)==1)
+	{
+	call ElmoMotorHome(12,HomeVel(12),HomePolarity(12))//蘸胶DD
+	}
+	if(HomeMotor(13)==1)
+	{
+	call ElmoMotorHome(13,HomeVel(13),HomePolarity(13))//贴片R
+	}
+	if(HomeMotor(14)==1)
+	{
+	call ElmoMotorHome(14,HomeVel(14),HomePolarity(14))//贴片DD
+	}
+	if(HomeMotor(15)==1)
+	{
+	call EcatMotorHome(15,HomeVel(15),HomePolarity(15))//流水线
+	}
+	if(HomeMotor(16)==1)
+	{
+	call ZhanJiaoPanHome(16,HomeVel(16),HomePolarity(16)) //蘸胶盘
+	}
+	if(HomeMotor(17)==1)
+	{
+	call JiaZhuaHome(17,HomeVel(17),HomePolarity(17))//夹爪电机
+	}
+	if(HomeMotor(18)==1)
+	{
+	HomeMotor(18)=0
+	homez 18
+	//	call LocalMotorHome(18,HomeVel(18),HomePolarity(18)) //移载Z
+	}
+	if(HomeMotor(19)==1)
+	{
+	HomeMotor(19)=0
+	homez 19
+	//call LocalMotorHome(19,HomeVel(19),HomePolarity(19)) //蘸胶Z
+	}
+	if(HomeMotor(20)==1)
+	{
+	HomeMotor(20)=0
+	homez 20
+	//call LocalMotorHome(20,HomeVel(20),HomePolarity(20))//贴片Z
+	}
+	if(HomeMotor(21)==1)  
+	{
+	call DSMotorHome(21,HomeVel(21),HomePolarity(21))
+	}
+
+	if(HomeMotor(22)==1)
+	{
+	call XiangJiZHome(22,HomeVel(22),HomePolarity(22))
+	}
+	if(HomeMotor(23)==1)
+	{
+	call XiangJiZHome(23,HomeVel(23),HomePolarity(23))
+	}
+
+}
+close

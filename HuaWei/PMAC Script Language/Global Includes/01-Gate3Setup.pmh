@@ -1,0 +1,93 @@
+Sys.WpKey = $AAAAAAAA
+/********************************伺服周期设置********************************/
+Gate3[0].PhaseFreq = 16000 //Phase 16KHz
+Gate3[0].ServoClockDiv = 1 //Phase 8KHz
+Gate3[1].PhaseFreq = 16000 //Phase 16KHz
+Gate3[1].ServoClockDiv = 1 //Phase 8KHz
+Sys.ServoPeriod = 0.125//1000 * (Gate3[0].ServoClockDiv + 1) / Gate3[0].PhaseFreq
+Sys.PhaseOverServoPeriod = 1 / (Gate3[0].ServoClockDiv + 1)
+ECAT[0].ServoExtension = 7
+/********************************ENC CLK设置********************************/
+Gate3[0].EncClockDiv=3
+Gate3[1].EncClockDiv=3
+
+
+/********************************PFM CLK设置********************************/
+Gate3[0].PfmClockDiv=3//3    //PFMCLK 3.125MHz
+Gate3[1].PfmClockDiv=3//3    //PFMCLK 3.125MHz
+
+
+/********************************IO设置********************************/
+Gate3[0].GpioDir[0] = $FFFF0000 //IO输入输出方式设置1为输出0为输入
+Gate3[1].GpioDir[0] = $FFFF0000 //IO输入输出方式设置1为输出0为输入
+
+/********************************输出模式********************************/
+Gate3[0].Chan[0].OutputMode=15
+Gate3[0].Chan[1].OutputMode=15
+Gate3[0].Chan[2].OutputMode=15
+Gate3[0].Chan[3].OutputMode=15
+
+Gate3[1].Chan[0].OutputMode=15
+Gate3[1].Chan[1].OutputMode=15
+Gate3[1].Chan[2].OutputMode=15
+Gate3[1].Chan[3].OutputMode=15
+
+Gate3[0].Chan[0].PackOutData=0
+Gate3[0].Chan[1].PackOutData=0
+Gate3[0].Chan[2].PackOutData=0
+Gate3[0].Chan[3].PackOutData=0
+
+Gate3[1].Chan[0].PackOutData=0
+Gate3[1].Chan[1].PackOutData=0
+Gate3[1].Chan[2].PackOutData=0
+Gate3[1].Chan[3].PackOutData=0
+
+/********************************输出脉冲形式********************************/
+Gate3[0].Chan[0].PfmFormat=0
+Gate3[0].Chan[1].PfmFormat=0
+Gate3[0].Chan[2].PfmFormat=1 //移载Z
+Gate3[0].Chan[3].PfmFormat=1 //蘸胶Z
+
+Gate3[1].Chan[0].PfmFormat=1 //贴片Z
+Gate3[1].Chan[1].PfmFormat=0
+Gate3[1].Chan[2].PfmFormat=1
+Gate3[1].Chan[3].PfmFormat=1
+
+/********************************脉冲宽度设定********************************/
+Gate3[0].Chan[0].PfmWidth=10 //粘胶盘3us 设定3.2us
+Gate3[0].Chan[1].PfmWidth=10 //夹爪3us 设定3.2us
+Gate3[0].Chan[2].PfmWidth=15
+Gate3[0].Chan[3].PfmWidth=15
+
+Gate3[1].Chan[0].PfmWidth=15
+Gate3[1].Chan[1].PfmWidth=13 //顶升4us  设定4.16us
+Gate3[1].Chan[2].PfmWidth=9 //移载相机2us 设定2.88us
+Gate3[1].Chan[3].PfmWidth=9 //贴片相机2us 设定2.88us
+
+/********************************脉冲极性设定********************************/
+Gate3[0].Chan[0].PfmDirPol=0
+Gate3[0].Chan[1].PfmDirPol=0
+Gate3[0].Chan[2].PfmDirPol=0
+Gate3[0].Chan[3].PfmDirPol=0
+
+Gate3[1].Chan[0].PfmDirPol=0
+Gate3[1].Chan[1].PfmDirPol=0
+Gate3[1].Chan[2].PfmDirPol=0
+Gate3[1].Chan[3].PfmDirPol=0
+
+/*******************************Time Mode设定********************************/
+Gate3[0].Chan[0].TimerMode=3 //粘胶盘
+Gate3[0].Chan[1].TimerMode=3 //夹爪
+Gate3[0].Chan[2].TimerMode=3 //移载Z电机
+Gate3[0].Chan[3].TimerMode=3 //蘸胶Z电机
+
+Gate3[1].Chan[0].TimerMode=3 //贴片Z电机
+Gate3[1].Chan[1].TimerMode=3 //顶升4us
+Gate3[1].Chan[2].TimerMode=3 //移载相机
+Gate3[1].Chan[3].TimerMode=3 //贴片相机
+
+Gate3[0].Chan[0].CaptCtrl = 2
+Gate3[0].Chan[1].CaptCtrl = 2
+Gate3[1].Chan[1].CaptCtrl= 10
+Gate3[1].Chan[2].CaptCtrl= 2
+Gate3[1].Chan[3].CaptCtrl= 2

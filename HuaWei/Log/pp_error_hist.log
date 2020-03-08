@@ -1,0 +1,14 @@
+[PMAC_HARDWARE]
+[PMAC_CONFIG]
+[PMAC_PROJECT]
+[PMAC_PROJECT]
+/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/04-EcatMotorSetup.pmh:161:17: error #70: Struct Write Data Error: Motor[4].pEnc2 = EncTable[4].a &1q
+Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+[PMAC_PROJECT]
+/var/ftp/usrflash/Project/PMAC Script Language/Global Includes/08-CoordSetup.pmh:18:7: error #20: ILLEGAL CMD: &3#3->X
+Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+[PMAC_PROJECT]
+/var/ftp/usrflash/Project/PMAC Script Language/PLC Programs/AlramResetPLC.plc:41:1: error #31: data error in equation:  ECAT[0].IO[2].Data=ECAT[0].IO[2].Data &$?FF7F?
+Error: downloading preprocessed File: "/var/ftp/usrflash/Temp/pp_proj.pma"
+[PMAC_PROJECT]
+[PMAC_CONFIG]

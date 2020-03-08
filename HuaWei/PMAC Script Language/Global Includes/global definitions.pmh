@@ -1,0 +1,284 @@
+Sys.SimConfigOk=0
+
+#define EtherCAT_Slave_Status Sys.Udata[99] //用于上电检查Ecat从站状态
+
+
+ptr MotorStatus0(31)->*;
+MotorStatus0(0)->Motor[0].Status[0]
+MotorStatus0(1)->Motor[1].Status[0]
+MotorStatus0(2)->Motor[2].Status[0]
+MotorStatus0(3)->Motor[3].Status[0]
+MotorStatus0(4)->Motor[4].Status[0]
+MotorStatus0(5)->Motor[5].Status[0]
+MotorStatus0(6)->Motor[6].Status[0]
+MotorStatus0(7)->Motor[7].Status[0]
+MotorStatus0(8)->Motor[8].Status[0]
+MotorStatus0(9)->Motor[9].Status[0]
+MotorStatus0(10)->Motor[10].Status[0]
+MotorStatus0(11)->Motor[11].Status[0]
+MotorStatus0(12)->Motor[12].Status[0]
+MotorStatus0(13)->Motor[13].Status[0]
+MotorStatus0(14)->Motor[14].Status[0]
+MotorStatus0(15)->Motor[15].Status[0]
+MotorStatus0(16)->Motor[16].Status[0]
+MotorStatus0(17)->Motor[17].Status[0]
+MotorStatus0(18)->Motor[18].Status[0]
+MotorStatus0(19)->Motor[19].Status[0]
+MotorStatus0(20)->Motor[20].Status[0]
+MotorStatus0(21)->Sys.Udata[1100]
+MotorStatus0(22)->Sys.Udata[1101]
+MotorStatus0(23)->Sys.Udata[1102]
+MotorStatus0(24)->Sys.Udata[1103]
+MotorStatus0(25)->Sys.Udata[1104]
+MotorStatus0(26)->Sys.Udata[1105]
+MotorStatus0(27)->Sys.Udata[1106]
+MotorStatus0(28)->Motor[28].Status[0]
+MotorStatus0(29)->Motor[29].Status[0]
+MotorStatus0(30)->Motor[30].Status[0]
+
+ptr CoordStatus0(21)->*;
+CoordStatus0(0)->Coord[0].Status[0]
+CoordStatus0(1)->Coord[1].Status[0]
+CoordStatus0(2)->Coord[2].Status[0]
+CoordStatus0(3)->Coord[3].Status[0]
+CoordStatus0(4)->Coord[4].Status[0]
+CoordStatus0(5)->Coord[5].Status[0]
+CoordStatus0(6)->Coord[6].Status[0]
+CoordStatus0(7)->Coord[7].Status[0]
+CoordStatus0(8)->Coord[8].Status[0]
+CoordStatus0(9)->Coord[9].Status[0]
+CoordStatus0(10)->Coord[10].Status[0]
+CoordStatus0(11)->Coord[11].Status[0]
+CoordStatus0(12)->Coord[12].Status[0]
+CoordStatus0(13)->Coord[13].Status[0]
+CoordStatus0(14)->Coord[14].Status[0]
+CoordStatus0(15)->Coord[15].Status[0]
+CoordStatus0(16)->Coord[16].Status[0]
+CoordStatus0(17)->Coord[17].Status[0]
+CoordStatus0(18)->Coord[18].Status[0]
+CoordStatus0(19)->Coord[19].Status[0]
+CoordStatus0(20)->Coord[20].Status[0]
+
+ptr MotorDesPos(21)->*;
+MotorDesPos(0)->Motor[0].Desired.Pos;
+MotorDesPos(1)->Motor[1].Desired.Pos;
+MotorDesPos(2)->Motor[2].Desired.Pos;
+MotorDesPos(3)->Motor[3].Desired.Pos;
+MotorDesPos(4)->Motor[4].Desired.Pos;
+MotorDesPos(5)->Motor[5].Desired.Pos;
+MotorDesPos(6)->Motor[6].Desired.Pos;
+MotorDesPos(7)->Motor[7].Desired.Pos;
+MotorDesPos(8)->Motor[8].Desired.Pos;
+MotorDesPos(9)->Motor[9].Desired.Pos;
+MotorDesPos(10)->Motor[10].Desired.Pos;
+MotorDesPos(11)->Motor[11].Desired.Pos;
+MotorDesPos(12)->Motor[12].Desired.Pos;
+MotorDesPos(13)->Motor[13].Desired.Pos;
+MotorDesPos(14)->Motor[14].Desired.Pos;
+MotorDesPos(15)->Motor[15].Desired.Pos;
+MotorDesPos(16)->Motor[16].Desired.Pos;
+MotorDesPos(17)->Motor[17].Desired.Pos;
+MotorDesPos(18)->Motor[18].Desired.Pos;
+MotorDesPos(19)->Motor[19].Desired.Pos;
+MotorDesPos(20)->Motor[20].Desired.Pos;
+
+
+/**********************回零PLC用变量**********************/
+#define HomeMotorAll Sys.Udata[100] //电机回零使能标志位
+ptr HomeMotor(28)->*
+HomeMotor(0)->u.user:$400.0.1
+HomeMotor(1)->u.user:$400.1.1
+HomeMotor(2)->u.user:$400.2.1
+HomeMotor(3)->u.user:$400.3.1
+HomeMotor(4)->u.user:$400.4.1
+HomeMotor(5)->u.user:$400.5.1
+HomeMotor(6)->u.user:$400.6.1
+HomeMotor(7)->u.user:$400.7.1
+HomeMotor(8)->u.user:$400.8.1
+HomeMotor(9)->u.user:$400.9.1
+HomeMotor(10)->u.user:$400.10.1
+HomeMotor(11)->u.user:$400.11.1
+HomeMotor(12)->u.user:$400.12.1
+HomeMotor(13)->u.user:$400.13.1
+HomeMotor(14)->u.user:$400.14.1
+HomeMotor(15)->u.user:$400.15.1
+HomeMotor(16)->u.user:$400.16.1
+HomeMotor(17)->u.user:$400.17.1
+HomeMotor(18)->u.user:$400.18.1
+HomeMotor(19)->u.user:$400.19.1
+HomeMotor(20)->u.user:$400.20.1
+HomeMotor(21)->u.user:$400.21.1
+HomeMotor(22)->u.user:$400.22.1
+HomeMotor(23)->u.user:$400.23.1
+HomeMotor(24)->u.user:$400.24.1
+HomeMotor(25)->u.user:$400.25.1
+HomeMotor(26)->u.user:$400.26.1
+HomeMotor(27)->u.user:$400.27.1
+
+
+ptr HomeStatus(28)->*;
+HomeStatus(0)->Sys.Udata[101];
+HomeStatus(1)->Sys.Udata[102];
+HomeStatus(2)->Sys.Udata[103];
+HomeStatus(3)->Sys.Udata[104];
+HomeStatus(4)->Sys.Udata[105];
+HomeStatus(5)->Sys.Udata[106];
+HomeStatus(6)->Sys.Udata[107];
+HomeStatus(7)->Sys.Udata[108];
+HomeStatus(8)->Sys.Udata[109];
+HomeStatus(9)->Sys.Udata[110];
+HomeStatus(10)->Sys.Udata[111];
+HomeStatus(11)->Sys.Udata[112];
+HomeStatus(12)->Sys.Udata[113];
+HomeStatus(13)->Sys.Udata[114];
+HomeStatus(14)->Sys.Udata[115];
+HomeStatus(15)->Sys.Udata[116];
+HomeStatus(16)->Sys.Udata[117];
+HomeStatus(17)->Sys.Udata[118];
+HomeStatus(18)->Sys.Udata[119];
+HomeStatus(19)->Sys.Udata[120];
+HomeStatus(20)->Sys.Udata[121];
+HomeStatus(21)->Sys.Udata[122];
+HomeStatus(22)->Sys.Udata[123];
+HomeStatus(23)->Sys.Udata[124];
+HomeStatus(24)->Sys.Udata[125];
+HomeStatus(25)->Sys.Udata[126];
+HomeStatus(26)->Sys.Udata[127];
+HomeStatus(27)->Sys.Udata[128];
+
+
+ptr HomePolarity(26)->*
+HomePolarity(0)->u.user:$560.0.1;
+HomePolarity(1)->u.user:$560.1.1;
+HomePolarity(2)->u.user:$560.2.1;
+HomePolarity(3)->u.user:$560.3.1;
+HomePolarity(4)->u.user:$560.4.1;
+HomePolarity(5)->u.user:$560.5.1;
+HomePolarity(6)->u.user:$560.6.1;
+HomePolarity(7)->u.user:$560.7.1;
+HomePolarity(8)->u.user:$560.8.1;
+HomePolarity(9)->u.user:$560.9.1;
+HomePolarity(10)->u.user:$560.10.1;
+HomePolarity(11)->u.user:$560.11.1;
+HomePolarity(12)->u.user:$560.12.1;
+HomePolarity(13)->u.user:$560.13.1;
+HomePolarity(14)->u.user:$560.14.1;
+HomePolarity(15)->u.user:$560.15.1;
+HomePolarity(16)->u.user:$560.16.1;
+HomePolarity(17)->u.user:$560.17.1;
+HomePolarity(18)->u.user:$560.18.1;
+HomePolarity(19)->u.user:$560.19.1;
+HomePolarity(20)->u.user:$560.20.1;
+HomePolarity(21)->u.user:$560.21.1;
+HomePolarity(22)->u.user:$560.22.1;
+HomePolarity(23)->u.user:$560.23.1;
+HomePolarity(24)->u.user:$560.24.1;
+HomePolarity(25)->u.user:$560.25.1;
+
+ptr HTimer(26)->*; //回零用定时器缓存
+HTimer(0)->Sys.Fdata[201];
+HTimer(1)->Sys.Fdata[202];
+HTimer(2)->Sys.Fdata[203];
+HTimer(3)->Sys.Fdata[204];
+HTimer(4)->Sys.Fdata[205];
+HTimer(5)->Sys.Fdata[206];
+HTimer(6)->Sys.Fdata[207];
+HTimer(7)->Sys.Fdata[208];
+HTimer(8)->Sys.Fdata[209];
+HTimer(9)->Sys.Fdata[210];
+HTimer(10)->Sys.Fdata[211];
+HTimer(11)->Sys.Fdata[212];
+HTimer(12)->Sys.Fdata[213];
+HTimer(13)->Sys.Fdata[214];
+HTimer(14)->Sys.Fdata[215];
+HTimer(15)->Sys.Fdata[216];
+HTimer(16)->Sys.Fdata[217];
+HTimer(17)->Sys.Fdata[218];
+HTimer(18)->Sys.Fdata[219];
+HTimer(19)->Sys.Fdata[220];
+HTimer(20)->Sys.Fdata[221];
+HTimer(21)->Sys.Fdata[222];
+HTimer(22)->Sys.Fdata[223];
+HTimer(23)->Sys.Fdata[224];
+HTimer(24)->Sys.Fdata[225];
+HTimer(25)->Sys.Fdata[226];
+
+
+ptr CtrlWord(16)->*; //回零用控制字
+CtrlWord(0)->*
+CtrlWord(1)->ECAT[0].IO[5].Data;  //ECAT[0].IO[7].Data;
+CtrlWord(2)->ECAT[0].IO[11].Data;  //ECAT[0].IO[11].Data;
+CtrlWord(3)->ECAT[0].IO[17].Data;  //ECAT[0].IO[15].Data;
+CtrlWord(4)->ECAT[0].IO[23].Data;  //ECAT[0].IO[19].Data;
+CtrlWord(5)->ECAT[0].IO[29].Data;  //ECAT[0].IO[23].Data;
+CtrlWord(6)->ECAT[0].IO[35].Data;  //ECAT[0].IO[27].Data
+CtrlWord(7)->ECAT[0].IO[41].Data;
+CtrlWord(8)->ECAT[0].IO[47].Data;
+CtrlWord(9)->ECAT[0].IO[53].Data;
+CtrlWord(10)->ECAT[0].IO[59].Data; //ECAT[0].IO[167].Data.4;
+CtrlWord(11)->ECAT[0].IO[65].Data; //ECAT[0].IO[171].Data.4;
+CtrlWord(12)->ECAT[0].IO[71].Data; //ECAT[0].IO[175].Data.4;
+CtrlWord(13)->ECAT[0].IO[77].Data; //ECAT[0].IO[175].Data.4;
+CtrlWord(14)->ECAT[0].IO[83].Data; //ECAT[0].IO[175].Data.4;
+CtrlWord(15)->ECAT[0].IO[89].Data; //ECAT[0].IO[175].Data.4;
+
+
+ptr Statusword(13)->*
+Statusword(10)->ECAT[0].IO[4355].Data.12  //ECAT[0].IO[4329].Data.12
+Statusword(11)->ECAT[0].IO[4360].Data.12  //ECAT[0].IO[4334].Data.12
+Statusword(12)->ECAT[0].IO[4365].Data.12  //ECAT[0].IO[4339].Data.12
+
+
+global HomeVel(21)
+HomeVel(1)=64
+HomeVel(2)=64
+HomeVel(3)=64
+HomeVel(4)=64
+HomeVel(5)=64
+HomeVel(6)=64
+HomeVel(7)=40
+HomeVel(8)=40
+HomeVel(9)=20
+HomeVel(10)=20
+HomeVel(11)=20
+HomeVel(12)=20
+HomeVel(13)=20
+HomeVel(14)=20
+HomeVel(15)=20
+HomeVel(16)=20
+HomeVel(17)=20
+HomeVel(18)=20
+HomeVel(19)=20
+HomeVel(20)=20
+HomeVel(21)=20
+HomeVel(22)=20
+HomeVel(23)=20
+HomeVel(24)=20
+HomeVel(25)=20
+
+HomePolarity(1)=1
+HomePolarity(2)=1
+HomePolarity(3)=0
+HomePolarity(4)=0
+HomePolarity(5)=1
+HomePolarity(6)=0
+HomePolarity(7)=1
+HomePolarity(8)=0
+HomePolarity(9)=0
+HomePolarity(10)=0
+HomePolarity(11)=0
+HomePolarity(12)=0
+HomePolarity(13)=0
+HomePolarity(14)=1
+HomePolarity(15)=1
+HomePolarity(16)=1
+HomePolarity(17)=1
+HomePolarity(18)=1
+HomePolarity(19)=0
+HomePolarity(20)=0
+HomePolarity(21)=0
+HomePolarity(22)=0
+HomePolarity(23)=0
+HomePolarity(24)=0
+HomePolarity(25)=0
+HomeStatus(1),27=0

@@ -1,0 +1,1998 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EtherCATInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="EtherCATInfo.xsd" Version="1.3">
+  <Vendor>
+    <Id>#x00000541</Id>
+    <Name>KEYENCE CORPORATION</Name>
+    <ImageData16x14>424DE8000000000000007600000028000000100000000E000000010004000000000072000000120B0000120B00000000000000000000FFFFFF00B9A7F80089898900343434006A6A6A004415EB00EDE8FD00FDFDFD00C9C9C900030303003704EA007552F000F6F6F600EAEAEA00FAFAFA00FF00FF00F00000000000000FF01000000002340FF05600000789980FF0AB00000C39400FF0AA10000299D00FF0AA56008992000FF0AAAB00393E000FF0AAAA189980000FF0AAAA564930000FF0AAAAABC392000FF05AAAAA1899800FF0BAAAAA56493E0FF06BAAAAABC3927FF00000000000000F0000</ImageData16x14>
+  </Vendor>
+  <Descriptions>
+    <Groups>
+      <Group>
+        <Type>EC1</Type>
+        <Name>Sensor Communication Adapter</Name>
+        <ImageData16x14>424DE8000000000000007600000028000000100000000E000000010004000000000072000000120B0000120B0000000000000000000043434300858585003838380028282800DFDFDF00C4C4C400626262007E7E7E00BFBFBF00A9A9A9005B5B5B0065656500959595000000000000000000FF00FF00FFFFF0FF0FFFFFFFFFFFF12300FFFFFFFFFFF145060FFFFFFFFFF784060FFFFFFFFFF798060FFFFFFFFFFA00060FFFFFFFFFFBC9060FFFFFFFFFFB66060FFFFFFFFFFBC9060FFFFFFFFFFB66060FFFFFFFFFF144060FFFFFFFFFF6CC060FFFFFFFFFFF69900FFFFFFFFFFFF6660FFFFF0000</ImageData16x14>
+      </Group>
+    </Groups>
+    <Devices>
+      <Device Physics="YY">
+        <Type ProductCode="4500" RevisionNo="#x0002">DL-EC1A</Type>
+        <Name><![CDATA[DL-EC1A]]></Name>
+        <URL LcId="1033">http://www.keyence.com/</URL>
+        <URL LcId="1031">http://www.keyence.de/</URL>
+        <URL LcId="1041">http://www.keyence.co.jp/</URL>
+        <Info>
+          <StateMachine>
+            <Timeout>
+              <PreopTimeout>3000</PreopTimeout>
+              <SafeopOpTimeout>10000</SafeopOpTimeout>
+              <BackToInitTimeout>5000</BackToInitTimeout>
+              <BackToSafeopTimeout>200</BackToSafeopTimeout>
+            </Timeout>
+          </StateMachine>
+          <Mailbox>
+            <Timeout>
+              <RequestTimeout>100</RequestTimeout>
+              <ResponseTimeout>20000</ResponseTimeout>
+            </Timeout>
+          </Mailbox>
+          <Port>
+            <Type>MII</Type>
+            <Label>IN</Label>
+          </Port>
+          <Port>
+            <Type>MII</Type>
+            <Label>OUT</Label>
+          </Port>
+          <IdentificationAdo>#x0012</IdentificationAdo>
+          <IdentificationReg134>1</IdentificationReg134>
+        </Info>
+        <GroupType>EC1</GroupType>
+        <Fmmu Sm="2">Outputs</Fmmu>
+        <Fmmu Sm="3">Inputs</Fmmu>
+        <Sm MinSize="32" MaxSize="192" DefaultSize="128" StartAddress="#x1000" ControlByte="#x26" Enable="1">MBoxOut</Sm>
+        <Sm MinSize="32" MaxSize="192" DefaultSize="128" StartAddress="#x1200" ControlByte="#x22" Enable="1">MBoxIn</Sm>
+        <Sm StartAddress="#x1C00" ControlByte="#x24" Enable="1">Outputs</Sm>
+        <Sm StartAddress="#x1800" ControlByte="#x20" Enable="1">Inputs</Sm>
+        <RxPdo Fixed="1" Sm="2">
+          <Index>#x1600</Index>
+          <Name>Input Request 1</Name>
+          <Entry>
+            <Index>#x7000</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>Request 1</Name>
+            <DataType>DWORD</DataType>
+          </Entry>
+        </RxPdo>
+        <RxPdo Fixed="1" Sm="2">
+          <Index>#x1601</Index>
+          <Name>Input Request 2</Name>
+          <Entry>
+            <Index>#x7000</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>Request 2</Name>
+            <DataType>DWORD</DataType>
+          </Entry>
+        </RxPdo>
+        <RxPdo Fixed="1" Sm="2">
+          <Index>#x1602</Index>
+          <Name>Input Request 3</Name>
+          <Entry>
+            <Index>#x7000</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>Request 3</Name>
+            <DataType>DWORD</DataType>
+          </Entry>
+        </RxPdo>
+        <RxPdo Fixed="1" Sm="2">
+          <Index>#x1603</Index>
+          <Name>Input Request 4</Name>
+          <Entry>
+            <Index>#x7000</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>Request 4</Name>
+            <DataType>DWORD</DataType>
+          </Entry>
+        </RxPdo>
+        <RxPdo Fixed="1" Sm="2">
+          <Index>#x1604</Index>
+          <Name>Input Request 5</Name>
+          <Entry>
+            <Index>#x7000</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>Request 5</Name>
+            <DataType>DWORD</DataType>
+          </Entry>
+        </RxPdo>
+        <TxPdo Fixed="1" Mandatory="1" Sm="3">
+          <Index>#x1A00</Index>
+          <Name>Status of System</Name>
+          <Entry>
+            <Index>#x6000</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Error Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6000</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Warning Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6000</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Current Value Property</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>8</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6000</Index>
+            <SubIndex>10</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Error Code</Name>
+            <DataType>UINT</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1">
+          <Index>#x1A01</Index>
+          <Name>Reserved</Name>
+          <Entry>
+            <Index>#x9800</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Reserved</Name>
+            <DataType>UINT</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x9800</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Reserved</Name>
+            <DataType>UINT</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A10</Index>
+          <Name>Input Response 1</Name>
+          <Entry>
+            <Index>#x6010</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>Response 1</Name>
+            <DataType>DWORD</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A11</Index>
+          <Name>Input Response 2</Name>
+          <Entry>
+            <Index>#x6010</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>Response 2</Name>
+            <DataType>DWORD</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A12</Index>
+          <Name>Input Response 3</Name>
+          <Entry>
+            <Index>#x6010</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>Response 3</Name>
+            <DataType>DWORD</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A13</Index>
+          <Name>Input Response 4</Name>
+          <Entry>
+            <Index>#x6010</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>Response 4</Name>
+            <DataType>DWORD</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A14</Index>
+          <Name>Input Response 5</Name>
+          <Entry>
+            <Index>#x6010</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>Response 5</Name>
+            <DataType>DWORD</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A20</Index>
+          <Name>ID01 Current Value</Name>
+          <Entry>
+            <Index>#x6100</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>ID01 Current Value (P.V.)</Name>
+            <DataType>DINT</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A21</Index>
+          <Name>ID02 Current Value</Name>
+          <Entry>
+            <Index>#x6110</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>ID02 Current Value (P.V.)</Name>
+            <DataType>DINT</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A22</Index>
+          <Name>ID03 Current Value</Name>
+          <Entry>
+            <Index>#x6120</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>ID03 Current Value (P.V.)</Name>
+            <DataType>DINT</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A23</Index>
+          <Name>ID04 Current Value</Name>
+          <Entry>
+            <Index>#x6130</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>ID04 Current Value (P.V.)</Name>
+            <DataType>DINT</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A24</Index>
+          <Name>ID05 Current Value</Name>
+          <Entry>
+            <Index>#x6140</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>ID05 Current Value (P.V.)</Name>
+            <DataType>DINT</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A25</Index>
+          <Name>ID06 Current Value</Name>
+          <Entry>
+            <Index>#x6150</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>ID06 Current Value (P.V.)</Name>
+            <DataType>DINT</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A26</Index>
+          <Name>ID07 Current Value</Name>
+          <Entry>
+            <Index>#x6160</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>ID07 Current Value (P.V.)</Name>
+            <DataType>DINT</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A27</Index>
+          <Name>ID08 Current Value</Name>
+          <Entry>
+            <Index>#x6170</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>ID08 Current Value (P.V.)</Name>
+            <DataType>DINT</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1">
+          <Index>#x1A28</Index>
+          <Name>ID09 Current Value</Name>
+          <Entry>
+            <Index>#x6180</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>ID09 Current Value (P.V.)</Name>
+            <DataType>DINT</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1">
+          <Index>#x1A29</Index>
+          <Name>ID10 Current Value</Name>
+          <Entry>
+            <Index>#x6190</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>ID10 Current Value (P.V.)</Name>
+            <DataType>DINT</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1">
+          <Index>#x1A2A</Index>
+          <Name>ID11 Current Value</Name>
+          <Entry>
+            <Index>#x61A0</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>ID11 Current Value (P.V.)</Name>
+            <DataType>DINT</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1">
+          <Index>#x1A2B</Index>
+          <Name>ID12 Current Value</Name>
+          <Entry>
+            <Index>#x61B0</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>ID12 Current Value (P.V.)</Name>
+            <DataType>DINT</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1">
+          <Index>#x1A2C</Index>
+          <Name>ID13 Current Value</Name>
+          <Entry>
+            <Index>#x61C0</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>ID13 Current Value (P.V.)</Name>
+            <DataType>DINT</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1">
+          <Index>#x1A2D</Index>
+          <Name>ID14 Current Value</Name>
+          <Entry>
+            <Index>#x61D0</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>ID14 Current Value (P.V.)</Name>
+            <DataType>DINT</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1">
+          <Index>#x1A2E</Index>
+          <Name>ID15 Current Value</Name>
+          <Entry>
+            <Index>#x61E0</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>ID15 Current Value (P.V.)</Name>
+            <DataType>DINT</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A30</Index>
+          <Name>ID01 Status</Name>
+          <Entry>
+            <Index>#x6100</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID01 Output 1</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6100</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID01 Output 2</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6100</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID01 Output 3</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6100</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID01 Output 4</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6100</Index>
+            <SubIndex>6</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID01 Output 5</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6100</Index>
+            <SubIndex>11</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID01 Current Value Invalid</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6100</Index>
+            <SubIndex>12</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID01 Current Value Under Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6100</Index>
+            <SubIndex>13</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID01 Current Value Over Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6100</Index>
+            <SubIndex>16</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID01 Warning Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6100</Index>
+            <SubIndex>17</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID01 Error Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A31</Index>
+          <Name>ID02 Status</Name>
+          <Entry>
+            <Index>#x6110</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID02 Output 1</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6110</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID02 Output 2</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6110</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID02 Output 3</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6110</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID02 Output 4</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6110</Index>
+            <SubIndex>6</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID02 Output 5</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6110</Index>
+            <SubIndex>11</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID02 Current Value Invalid</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6110</Index>
+            <SubIndex>12</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID02 Current Value Under Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6110</Index>
+            <SubIndex>13</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID02 Current Value Over Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6110</Index>
+            <SubIndex>16</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID02 Warning Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6110</Index>
+            <SubIndex>17</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID02 Error Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A32</Index>
+          <Name>ID03 Status</Name>
+          <Entry>
+            <Index>#x6120</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID03 Output 1</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6120</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID03 Output 2</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6120</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID03 Output 3</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6120</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID03 Output 4</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6120</Index>
+            <SubIndex>6</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID03 Output 5</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6120</Index>
+            <SubIndex>11</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID03 Current Value Invalid</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6120</Index>
+            <SubIndex>12</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID03 Current Value Under Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6120</Index>
+            <SubIndex>13</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID03 Current Value Over Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6120</Index>
+            <SubIndex>16</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID03 Warning Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6120</Index>
+            <SubIndex>17</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID03 Error Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A33</Index>
+          <Name>ID04 Status</Name>
+          <Entry>
+            <Index>#x6130</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID04 Output 1</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6130</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID04 Output 2</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6130</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID04 Output 3</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6130</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID04 Output 4</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6130</Index>
+            <SubIndex>6</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID04 Output 5</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6130</Index>
+            <SubIndex>11</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID04 Current Value Invalid</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6130</Index>
+            <SubIndex>12</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID04 Current Value Under Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6130</Index>
+            <SubIndex>13</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID04 Current Value Over Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6130</Index>
+            <SubIndex>16</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID04 Warning Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6130</Index>
+            <SubIndex>17</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID04 Error Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A34</Index>
+          <Name>ID05 Status</Name>
+          <Entry>
+            <Index>#x6140</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID05 Output 1</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6140</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID05 Output 2</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6140</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID05 Output 3</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6140</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID05 Output 4</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6140</Index>
+            <SubIndex>6</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID05 Output 5</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6140</Index>
+            <SubIndex>11</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID05 Current Value Invalid</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6140</Index>
+            <SubIndex>12</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID05 Current Value Under Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6140</Index>
+            <SubIndex>13</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID05 Current Value Over Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6140</Index>
+            <SubIndex>16</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID05 Warning Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6140</Index>
+            <SubIndex>17</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID05 Error Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A35</Index>
+          <Name>ID06 Status</Name>
+          <Entry>
+            <Index>#x6150</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID06 Output 1</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6150</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID06 Output 2</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6150</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID06 Output 3</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6150</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID06 Output 4</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6150</Index>
+            <SubIndex>6</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID06 Output 5</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6150</Index>
+            <SubIndex>11</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID06 Current Value Invalid</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6150</Index>
+            <SubIndex>12</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID06 Current Value Under Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6150</Index>
+            <SubIndex>13</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID06 Current Value Over Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6150</Index>
+            <SubIndex>16</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID06 Warning Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6150</Index>
+            <SubIndex>17</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID06 Error Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A36</Index>
+          <Name>ID07 Status</Name>
+          <Entry>
+            <Index>#x6160</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID07 Output 1</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6160</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID07 Output 2</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6160</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID07 Output 3</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6160</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID07 Output 4</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6160</Index>
+            <SubIndex>6</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID07 Output 5</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6160</Index>
+            <SubIndex>11</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID07 Current Value Invalid</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6160</Index>
+            <SubIndex>12</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID07 Current Value Under Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6160</Index>
+            <SubIndex>13</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID07 Current Value Over Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6160</Index>
+            <SubIndex>16</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID07 Warning Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6160</Index>
+            <SubIndex>17</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID07 Error Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1" Sm="3">
+          <Index>#x1A37</Index>
+          <Name>ID08 Status</Name>
+          <Entry>
+            <Index>#x6170</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID08 Output 1</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6170</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID08 Output 2</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6170</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID08 Output 3</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6170</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID08 Output 4</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6170</Index>
+            <SubIndex>6</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID08 Output 5</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6170</Index>
+            <SubIndex>11</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID08 Current Value Invalid</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6170</Index>
+            <SubIndex>12</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID08 Current Value Under Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6170</Index>
+            <SubIndex>13</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID08 Current Value Over Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6170</Index>
+            <SubIndex>16</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID08 Warning Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6170</Index>
+            <SubIndex>17</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID08 Error Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1">
+          <Index>#x1A38</Index>
+          <Name>ID09 Status</Name>
+          <Entry>
+            <Index>#x6180</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID09 Output 1</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6180</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID09 Output 2</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6180</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID09 Output 3</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6180</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID09 Output 4</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6180</Index>
+            <SubIndex>6</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID09 Output 5</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6180</Index>
+            <SubIndex>11</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID09 Current Value Invalid</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6180</Index>
+            <SubIndex>12</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID09 Current Value Under Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6180</Index>
+            <SubIndex>13</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID09 Current Value Over Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6180</Index>
+            <SubIndex>16</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID09 Warning Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6180</Index>
+            <SubIndex>17</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID09 Error Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1">
+          <Index>#x1A39</Index>
+          <Name>ID10 Status</Name>
+          <Entry>
+            <Index>#x6190</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID10 Output 1</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6190</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID10 Output 2</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6190</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID10 Output 3</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6190</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID10 Output 4</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6190</Index>
+            <SubIndex>6</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID10 Output 5</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6190</Index>
+            <SubIndex>11</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID10 Current Value Invalid</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6190</Index>
+            <SubIndex>12</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID10 Current Value Under Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6190</Index>
+            <SubIndex>13</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID10 Current Value Over Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x6190</Index>
+            <SubIndex>16</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID10 Warning Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6190</Index>
+            <SubIndex>17</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID10 Error Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1">
+          <Index>#x1A3A</Index>
+          <Name>ID11 Status</Name>
+          <Entry>
+            <Index>#x61A0</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID11 Output 1</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61A0</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID11 Output 2</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61A0</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID11 Output 3</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61A0</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID11 Output 4</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61A0</Index>
+            <SubIndex>6</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID11 Output 5</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x61A0</Index>
+            <SubIndex>11</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID11 Current Value Invalid</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61A0</Index>
+            <SubIndex>12</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID11 Current Value Under Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61A0</Index>
+            <SubIndex>13</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID11 Current Value Over Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x61A0</Index>
+            <SubIndex>16</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID11 Warning Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61A0</Index>
+            <SubIndex>17</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID11 Error Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1">
+          <Index>#x1A3B</Index>
+          <Name>ID12 Status</Name>
+          <Entry>
+            <Index>#x61B0</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID12 Output 1</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61B0</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID12 Output 2</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61B0</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID12 Output 3</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61B0</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID12 Output 4</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61B0</Index>
+            <SubIndex>6</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID12 Output 5</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x61B0</Index>
+            <SubIndex>11</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID12 Current Value Invalid</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61B0</Index>
+            <SubIndex>12</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID12 Current Value Under Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61B0</Index>
+            <SubIndex>13</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID12 Current Value Over Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x61B0</Index>
+            <SubIndex>16</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID12 Warning Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61B0</Index>
+            <SubIndex>17</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID12 Error Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1">
+          <Index>#x1A3C</Index>
+          <Name>ID13 Status</Name>
+          <Entry>
+            <Index>#x61C0</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID13 Output 1</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61C0</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID13 Output 2</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61C0</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID13 Output 3</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61C0</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID13 Output 4</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61C0</Index>
+            <SubIndex>6</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID13 Output 5</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x61C0</Index>
+            <SubIndex>11</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID13 Current Value Invalid</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61C0</Index>
+            <SubIndex>12</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID13 Current Value Under Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61C0</Index>
+            <SubIndex>13</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID13 Current Value Over Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x61C0</Index>
+            <SubIndex>16</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID13 Warning Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61C0</Index>
+            <SubIndex>17</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID13 Error Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1">
+          <Index>#x1A3D</Index>
+          <Name>ID14 Status</Name>
+          <Entry>
+            <Index>#x61D0</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID14 Output 1</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61D0</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID14 Output 2</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61D0</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID14 Output 3</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61D0</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID14 Output 4</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61D0</Index>
+            <SubIndex>6</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID14 Output 5</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x61D0</Index>
+            <SubIndex>11</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID14 Current Value Invalid</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61D0</Index>
+            <SubIndex>12</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID14 Current Value Under Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61D0</Index>
+            <SubIndex>13</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID14 Current Value Over Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x61D0</Index>
+            <SubIndex>16</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID14 Warning Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61D0</Index>
+            <SubIndex>17</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID14 Error Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="1">
+          <Index>#x1A3E</Index>
+          <Name>ID15 Status</Name>
+          <Entry>
+            <Index>#x61E0</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID15 Output 1</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61E0</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID15 Output 2</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61E0</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID15 Output 3</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61E0</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID15 Output 4</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61E0</Index>
+            <SubIndex>6</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID15 Output 5</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x61E0</Index>
+            <SubIndex>11</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID15 Current Value Invalid</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61E0</Index>
+            <SubIndex>12</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID15 Current Value Under Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61E0</Index>
+            <SubIndex>13</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID15 Current Value Over Range</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x0</Index>
+            <BitLen>1</BitLen>
+            <Name>Reserved</Name>
+          </Entry>
+          <Entry>
+            <Index>#x61E0</Index>
+            <SubIndex>16</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID15 Warning Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x61E0</Index>
+            <SubIndex>17</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>ID15 Error Status</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+        </TxPdo>
+        <Mailbox DataLinkLayer="1">
+          <CoE SdoInfo="1" PdoAssign="1" PdoConfig="0" CompleteAccess="1"/>
+        </Mailbox>
+        <Dc>
+          <OpMode>
+            <Name>FreeRun</Name>
+            <Desc>FreeRun</Desc>
+            <AssignActivate>#x00</AssignActivate>
+            <CycleTimeSync0 Factor="0">0</CycleTimeSync0>
+            <ShiftTimeSync0>0</ShiftTimeSync0>
+          </OpMode>
+          <OpMode>
+            <Name>DC</Name>
+            <Desc>DC-Synchronous</Desc>
+            <AssignActivate>#x300</AssignActivate>
+            <CycleTimeSync0 Factor="1">0</CycleTimeSync0>
+            <ShiftTimeSync0>0</ShiftTimeSync0>
+          </OpMode>
+        </Dc>
+        <Eeprom>
+          <ByteSize>8192</ByteSize>
+          <ConfigData>080C001400000000</ConfigData>
+        </Eeprom>
+        <ImageData16x14>424DE8000000000000007600000028000000100000000E000000010004000000000072000000120B0000120B00000000000000000000464646003333330012121200999999008080800044444400706262005E4545005252520000007A002D2D2D000000AB00008A2200B8B8B80045454500FF00FF00FF0FFFF0FFFFFFFF11112111121112FF134524345267722F18952889524772A218B5288B526772A21B9528B9524772A21CB528CB528D42A218952889528DD2A218E5238E528882A218852488828D42A254442444428DD2A2F544424444888822FF55552555533382FFFFFFFFFFF888880000</ImageData16x14>
+      </Device>
+    </Devices>
+  </Descriptions>
+</EtherCATInfo>

@@ -1,0 +1,7 @@
+Sys.MaxMotors=32
+Sys.MaxCoords=4
+Sys.MaxRtPlc=0
+Sys.CompEnable=0
+
+Sys.BgSleepTime=5000
+Sys.RtIntPeriod = 1

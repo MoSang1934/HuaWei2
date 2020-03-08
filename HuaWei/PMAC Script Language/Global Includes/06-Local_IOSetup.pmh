@@ -1,0 +1,160 @@
+/***********************±¾µØÊäÈëIO********************************/
+/*ptr YZ_X_EN->Gate3[0].GpioData[0].0.1	//ÒÆÔØX-EN
+ptr YZ_X_ALM->Gate3[0].GpioData[0].1.1	//ÒÆÔØX-ALM
+ptr YZ_X_ARRIVAL->Gate3[0].GpioData[0].2.1	//ÒÆÔØX-ARRIVAL
+ptr YZ_Y_EN->Gate3[0].GpioData[0].4.1	//ÒÆÔØY-EN
+ptr YZ_Y_ALM->Gate3[0].GpioData[0].5.1	//ÒÆÔØY-ALM
+ptr YZ_Y_ARRIVAL->Gate3[0].GpioData[0].6.1	//ÒÆÔØY-ARRIVAL
+ptr ZJ_X_EN->Gate3[0].GpioData[0].8.1	//Õº½ºX-EN
+ptr ZJ_X_ALM->Gate3[0].GpioData[0].9.1	//Õº½ºX-ALM
+ptr ZJ_X_ARRIVAL->Gate3[0].GpioData[0].10.1	//Õº½ºX-ARRIVAL
+ptr ZJ_Y_EN->Gate3[0].GpioData[0].12.1	//Õº½ºY-EN
+ptr ZJ_Y_ALM->Gate3[0].GpioData[0].13.1	//Õº½ºY-ALM
+ptr ZJ_Y_ARRIVAL->Gate3[0].GpioData[0].14.1	//Õº½ºY-ARRIVAL
+ptr TP_X_EN->Gate3[1].GpioData[0].0.1	//ÌùÆ¬X-EN
+ptr TP_X_ALM->Gate3[1].GpioData[0].1.1	//ÌùÆ¬X-ALM
+ptr TP_X_ARRIVAL->Gate3[1].GpioData[0].2.1	//ÌùÆ¬X-ARRIVAL
+ptr TP_Y_EN->Gate3[1].GpioData[0].4.1	//ÌùÆ¬Y-EN
+ptr TP_Y_ALM->Gate3[1].GpioData[0].5.1	//ÌùÆ¬Y-ALM
+ptr TP_Y_ARRIVAL->Gate3[1].GpioData[0].6.1	//ÌùÆ¬Y-ARRIVAL
+ptr ZZT_EN->Gate3[1].GpioData[0].8.1	//ÖÐ×ªÌ¨-EN
+ptr ZZT_ALM->Gate3[1].GpioData[0].9.1	//ÖÐ×ªÌ¨-ALM
+ptr ZZT_ARRIVAL->Gate3[1].GpioData[0].10.1	//ÖÐ×ªÌ¨-ARRIVAL
+ptr CSJZ_EN->Gate3[1].GpioData[0].12.1	//´«ËÍ¼Ð×¦-EN
+ptr CSJZ_ALM->Gate3[1].GpioData[0].13.1	//´«ËÍ¼Ð×¦-ALM
+ptr CSJZ_ARRIVAL->Gate3[1].GpioData[0].14.1	//´«ËÍ¼Ð×¦-ARRIVAL
+*/
+ptr EMC->Gate3[0].GpioData[0].8.1
+ptr SEMC->Sys.Udata[2]
+ptr ZJP_READY->Gate3[0].GpioData[0].0.1	//Õ³½ºÅÌ-READY
+ptr ZJP_ALM->Gate3[0].GpioData[0].1.1	//Õ³½ºÅÌ-ALM
+ptr ZJP_TIM->Gate3[0].GpioData[0].2.1	//Õ³½ºÅÌ-TIM
+ptr JZDJ_READY->Gate3[0].GpioData[0].4.1	//¼Ð×¦µç»ú-READY
+ptr JZDJ_ALM->Gate3[0].GpioData[0].5.1	//¼Ð×¦µç»ú-ALM
+ptr JZDJ_TIM->Gate3[0].GpioData[0].6.1	//¼Ð×¦µç»ú-TIM
+	
+ptr YZ_Z_ALM->Gate3[0].GpioData[0].9.1	//ÒÆÔØZÖá-ALM
+ptr YZ_Z_READY->Gate3[0].GpioData[0].10.1	//ÒÆÔØZÖá-READY
+ptr ZJ_Z_ALM->Gate3[0].GpioData[0].13.1	//Õº½ºZÖá-ALM
+ptr ZJ_Z_READY->Gate3[0].GpioData[0].14.1	//Õº½ºZÖá-READY
+ptr TP_Z_ALM->Gate3[1].GpioData[0].0.1	//ÌùÆ¬ZÖá-ALM
+ptr TP_Z_READY->Gate3[1].GpioData[0].1.1	//ÌùÆ¬ZÖá-READY
+	
+ptr DS_READY->Gate3[1].GpioData[0].4.1	//¶¥Éý-READY
+ptr DS_ALM->Gate3[1].GpioData[0].5.1	//¶¥Éý-ALM
+ptr DS_INPOS->Gate3[1].GpioData[0].6.1	//¶¥Éý-INPOS
+	
+ptr YZXJ_Z_READY->Gate3[1].GpioData[0].8.1	//ÒÆÔØÏà»úZ-READY
+ptr YZXJ_Z_INPOS->Gate3[1].GpioData[0].9.1	//ÒÆÔØÏà»úZ-INPOS
+ptr YZXJ_Z_ALM->Gate3[1].GpioData[0].10.1	//ÒÆÔØÏà»úZ-ALM
+ptr TPXJ_Z_READY->Gate3[1].GpioData[0].12.1	//ÌùÆ¬Ïà»úZ-READY
+ptr TPXJ_Z_INPOS->Gate3[1].GpioData[0].13.1	//ÌùÆ¬Ïà»úZ-INPOS
+ptr TPXJ_Z_ALM->Gate3[1].GpioData[0].14.1	//ÌùÆ¬Ïà»úZ-ALM
+
+M2100->Gate3[0].GpioData[0].0.1;  
+M2101->Gate3[0].GpioData[0].1.1;  
+M2102->Gate3[0].GpioData[0].2.1;  
+M2103->Gate3[0].GpioData[0].3.1;  
+M2104->Gate3[0].GpioData[0].4.1;  
+M2105->Gate3[0].GpioData[0].5.1;  
+M2106->Gate3[0].GpioData[0].6.1;  
+M2107->Gate3[0].GpioData[0].7.1;  
+M2108->Gate3[0].GpioData[0].8.1;  
+M2109->Gate3[0].GpioData[0].9.1;  
+M2110->Gate3[0].GpioData[0].10.1; 
+M2111->Gate3[0].GpioData[0].11.1; 
+M2112->Gate3[0].GpioData[0].12.1; 
+M2113->Gate3[0].GpioData[0].13.1; 
+M2114->Gate3[0].GpioData[0].14.1; 
+M2115->Gate3[0].GpioData[0].15.1; 
+                                  
+M2116->Gate3[1].GpioData[0].0.1;  
+M2117->Gate3[1].GpioData[0].1.1;  
+M2118->Gate3[1].GpioData[0].2.1;  
+M2119->Gate3[1].GpioData[0].3.1;  
+M2120->Gate3[1].GpioData[0].4.1;  
+M2121->Gate3[1].GpioData[0].5.1;  
+M2122->Gate3[1].GpioData[0].6.1;  
+M2123->Gate3[1].GpioData[0].7.1;  
+M2124->Gate3[1].GpioData[0].8.1;  
+M2125->Gate3[1].GpioData[0].9.1;  
+M2126->Gate3[1].GpioData[0].10.1; 
+M2127->Gate3[1].GpioData[0].11.1; 
+M2128->Gate3[1].GpioData[0].12.1; 
+M2129->Gate3[1].GpioData[0].13.1; 
+M2130->Gate3[1].GpioData[0].14.1; 
+M2131->Gate3[1].GpioData[0].15.1;                                   
+
+/***********************±¾µØÊä³öIO********************************/
+/*ptr YZ_X_CLEAR->Gate3[0].GpioData[0].17.1	//ÒÆÔØX-CLEAR
+ptr YZ_Y_ESTOP->Gate3[0].GpioData[0].20.1	//ÒÆÔØY-ESTOP
+ptr YZ_Y_CLEAR->Gate3[0].GpioData[0].21.1	//ÒÆÔØY-CLEAR
+ptr ZJ_X_ESTOP->Gate3[0].GpioData[0].24.1	//Õº½ºX-ESTOP
+ptr ZJ_X_CLEAR->Gate3[0].GpioData[0].25.1	//Õº½ºX-CLEAR
+ptr ZJ_Y_ESTOP->Gate3[0].GpioData[0].28.1	//Õº½ºY-ESTOP
+ptr ZJ_Y_CLEAR->Gate3[0].GpioData[0].29.1	//Õº½ºY-CLEAR
+ptr TP_X_ESTOP->Gate3[1].GpioData[0].16.1	//ÌùÆ¬X-ESTOP
+ptr TP_X_CLEAR->Gate3[1].GpioData[0].17.1	//ÌùÆ¬X-CLEAR
+ptr TP_Y_ESTOP->Gate3[1].GpioData[0].20.1	//ÌùÆ¬Y-ESTOP
+ptr TP_Y_CLEAR->Gate3[1].GpioData[0].21.1	//ÌùÆ¬Y-CLEAR
+ptr ZZT_ESTOP->Gate3[1].GpioData[0].24.1	//ÖÐ×ªÌ¨-ESTOP
+ptr ZZT_CLEAR->Gate3[1].GpioData[0].25.1	//ÖÐ×ªÌ¨-CLEAR
+ptr CSJZ_ESTOP->Gate3[1].GpioData[0].28.1	//´«ËÍ¼Ð×¦-ESTOP
+ptr CSJZ_CLEAR->Gate3[1].GpioData[0].29.1	//´«ËÍ¼Ð×¦-CLEAR
+*/
+ptr ZJP_FREE->Gate3[0].GpioData[0].16.1	//Õ³½ºÅÌ-FREE
+ptr ZJP_RESET->Gate3[0].GpioData[0].17.1	//Õ³½ºÅÌ-RESET
+ptr JZDJ_FREE->Gate3[0].GpioData[0].20.1	//¼Ð×¦µç»ú-FREE
+ptr JZDJ_RESET->Gate3[0].GpioData[0].21.1	//¼Ð×¦µç»ú-RESET
+
+ptr	STO_0->Gate3[0].GpioData[0].24.1//STO
+ptr	STO_1->Gate3[0].GpioData[0].28.1//STO
+ptr YZ_Z_ENA->Gate3[0].GpioData[0].25.1	//ÒÆÔØZÖá-Ena
+ptr YZ_Z_CLEAR->Gate3[0].GpioData[0].26.1	//ÒÆÔØZÖá-CLEAR
+ptr ZJ_Z_ENA->Gate3[0].GpioData[0].29.1	//Õº½ºZÖá-Ena
+ptr ZJ_Z_CLEAR->Gate3[0].GpioData[0].30.1	//Õº½ºZÖá-CLEAR
+ptr TP_Z_ENA->Gate3[1].GpioData[0].17.1	//ÌùÆ¬ZÖá-Ena
+ptr TP_Z_CLEAR->Gate3[1].GpioData[0].18.1	//ÌùÆ¬ZÖá-CLEAR
+	
+ptr DS_FREE->Gate3[1].GpioData[0].20.1	//¶¥Éý-FREE
+ptr DS_RESET->Gate3[1].GpioData[0].21.1	//¶¥Éý-RESET
+	
+ptr YZXJ_Z_FREE->Gate3[1].GpioData[0].24.1	//ÒÆÔØÏà»úZ-FREE
+ptr YZXJ_Z_RESET->Gate3[1].GpioData[0].25.1	//ÒÆÔØÏà»úZ-RESET
+ptr TPXJ_Z_FREE->Gate3[1].GpioData[0].28.1	//ÌùÆ¬Ïà»úZ-FREE
+ptr TPXJ_Z_RESET->Gate3[1].GpioData[0].29.1	//ÌùÆ¬Ïà»úZ-RESET
+
+M2000->Gate3[0].GpioData[0].16.1;
+M2001->Gate3[0].GpioData[0].17.1;
+M2002->Gate3[0].GpioData[0].18.1;
+M2003->Gate3[0].GpioData[0].19.1;
+M2004->Gate3[0].GpioData[0].20.1;
+M2005->Gate3[0].GpioData[0].21.1;
+M2006->Gate3[0].GpioData[0].22.1;
+M2007->Gate3[0].GpioData[0].23.1;
+M2008->Gate3[0].GpioData[0].24.1;
+M2009->Gate3[0].GpioData[0].25.1;
+M2010->Gate3[0].GpioData[0].26.1;
+M2011->Gate3[0].GpioData[0].27.1;
+M2012->Gate3[0].GpioData[0].28.1;
+M2013->Gate3[0].GpioData[0].29.1;
+M2014->Gate3[0].GpioData[0].30.1;
+M2015->Gate3[0].GpioData[0].31.1;
+                                 
+M2016->Gate3[1].GpioData[0].16.1;
+M2017->Gate3[1].GpioData[0].17.1;
+M2018->Gate3[1].GpioData[0].18.1;
+M2019->Gate3[1].GpioData[0].19.1;
+M2020->Gate3[1].GpioData[0].20.1;
+M2021->Gate3[1].GpioData[0].21.1;
+M2022->Gate3[1].GpioData[0].22.1;
+M2023->Gate3[1].GpioData[0].23.1;
+M2024->Gate3[1].GpioData[0].24.1;
+M2025->Gate3[1].GpioData[0].25.1;
+M2026->Gate3[1].GpioData[0].26.1;
+M2027->Gate3[1].GpioData[0].27.1;
+M2028->Gate3[1].GpioData[0].28.1;
+M2029->Gate3[1].GpioData[0].29.1;
+M2030->Gate3[1].GpioData[0].30.1;
+M2031->Gate3[1].GpioData[0].31.1;
+                                 

@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>DC55630F-4F87-4875-BDCF-C595C895EBF0</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>HuaWei</RootNamespace>
+    <AssemblyName>Power Pmac Project Template</AssemblyName>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <IPAddress>192.168.0.200</IPAddress>
+    <TelnetPassword>deltatau</TelnetPassword>
+    <TelnetPort>22</TelnetPort>
+    <TelnetUser>root</TelnetUser>
+    <FTPPassword>ftp</FTPPassword>
+    <FTPPort>21</FTPPort>
+    <FTPUser>ftp</FTPUser>
+    <PVarStart>8192</PVarStart>
+    <QVarStart>1024</QVarStart>
+    <MVarStart>8192</MVarStart>
+    <UserBuffer>1</UserBuffer>
+    <ProgramBuffer>16</ProgramBuffer>
+    <TableBuffer>1</TableBuffer>
+    <LookAheadBuffer>16</LookAheadBuffer>
+    <SymbolsBufSize>1</SymbolsBufSize>
+    <CpuAffinityServoTask>1</CpuAffinityServoTask>
+    <CpuAffinityRtiTask>1</CpuAffinityRtiTask>
+    <CpuAffinityBackgroundTask>0</CpuAffinityBackgroundTask>
+    <CpuAffinityRtpmacMainTask>0</CpuAffinityRtpmacMainTask>
+    <EtherCatStackType>1</EtherCatStackType>
+    <RealtimeRoutinesBuildFlag>0</RealtimeRoutinesBuildFlag>
+    <TemplateVersion>2.5</TemplateVersion>
+    <ProjppRunAtOption>No</ProjppRunAtOption>
+    <DownloadCSoruce>No</DownloadCSoruce>
+    <EncryptionOption>Do Not Encrypt Any File</EncryptionOption>
+    <ProjppTimeoutPeriod>300000</ProjppTimeoutPeriod>
+    <ProjectExportLevel>0</ProjectExportLevel>
+    <DownloadSystemSetupConfig>Yes</DownloadSystemSetupConfig>
+    <UseNewNamingFormat>Yes</UseNewNamingFormat>
+    <Name>HuaWei</Name>
+    <PPCPUType>armv71-4.1.18;4.1.18-ipipe</PPCPUType>
+    <ProjectFrimwareVers>2.5.2.0</ProjectFrimwareVers>
+    <CPUType>arm,LS1021A</CPUType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>Bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>Bin\Release\</OutputPath>
+  </PropertyGroup>
+  <UsingTask AssemblyFile="$(CompileTaskPath)\PPMAC460CompileTask.dll" TaskName="PPMAC460CompileTask.CompileTask" />
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="C Language\Include\ECATMap.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Configuration\ECATConfig.cfg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Configuration\eni.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PMAC Script Language\Global Includes\01-Gate3Setup.pmh">
+      <SubType>Content</SubType>
+      <DisplayOrder>2</DisplayOrder>
+    </Content>
+    <Content Include="PMAC Script Language\Global Includes\02-SystemSetup.pmh">
+      <SubType>Content</SubType>
+      <DisplayOrder>3</DisplayOrder>
+    </Content>
+    <Content Include="PMAC Script Language\Global Includes\03-EncSetup.pmh">
+      <SubType>Content</SubType>
+      <DisplayOrder>4</DisplayOrder>
+    </Content>
+    <Content Include="PMAC Script Language\Global Includes\04-EcatMotorSetup.pmh">
+      <SubType>Content</SubType>
+      <DisplayOrder>5</DisplayOrder>
+    </Content>
+    <Content Include="PMAC Script Language\Global Includes\05-PFMMotorSetup.pmh">
+      <SubType>Content</SubType>
+      <DisplayOrder>6</DisplayOrder>
+    </Content>
+    <Content Include="PMAC Script Language\Global Includes\06-Local_IOSetup.pmh">
+      <SubType>Content</SubType>
+      <DisplayOrder>7</DisplayOrder>
+    </Content>
+    <Content Include="PMAC Script Language\Global Includes\07-EcatIOSetup.pmh">
+      <SubType>Content</SubType>
+      <DisplayOrder>8</DisplayOrder>
+    </Content>
+    <Content Include="PMAC Script Language\Global Includes\08-CoordSetup.pmh">
+      <SubType>Content</SubType>
+      <DisplayOrder>9</DisplayOrder>
+    </Content>
+    <Content Include="PMAC Script Language\Global Includes\09-VirtualMotor.pmh">
+      <SubType>Content</SubType>
+      <DisplayOrder>10</DisplayOrder>
+    </Content>
+    <Content Include="PMAC Script Language\Global Includes\ECATMap.pmh">
+      <SubType>Content</SubType>
+      <DisplayOrder>0</DisplayOrder>
+    </Content>
+    <Content Include="PMAC Script Language\Libraries\DSMotorHome.pmc">
+      <SubType>Content</SubType>
+      <DisplayOrder>4</DisplayOrder>
+    </Content>
+    <Content Include="PMAC Script Language\Libraries\EcatMotorHome.pmc">
+      <SubType>Content</SubType>
+      <DisplayOrder>2</DisplayOrder>
+    </Content>
+    <Content Include="PMAC Script Language\Libraries\ElmoMotorHome.pmc">
+      <SubType>Content</SubType>
+      <DisplayOrder>3</DisplayOrder>
+    </Content>
+    <Content Include="PMAC Script Language\Libraries\JiaZhuaHome.pmc">
+      <SubType>Content</SubType>
+      <DisplayOrder>5</DisplayOrder>
+    </Content>
+    <Content Include="PMAC Script Language\Libraries\XiangJiZHome.pmc">
+      <SubType>Content</SubType>
+      <DisplayOrder>6</DisplayOrder>
+    </Content>
+    <Content Include="PMAC Script Language\Libraries\ZhanJiaoPanHome.pmc">
+      <SubType>Content</SubType>
+      <DisplayOrder>7</DisplayOrder>
+    </Content>
+    <Content Include="PMAC Script Language\PLC Programs\AlramResetPLC.plc">
+      <SubType>Content</SubType>
+      <DisplayOrder>2</DisplayOrder>
+    </Content>
+    <Content Include="PMAC Script Language\PLC Programs\HomingPLC.plc">
+      <SubType>Content</SubType>
+      <DisplayOrder>1</DisplayOrder>
+    </Content>
+    <Content Include="System\EtherCAT\273.ecatslave">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\Master0.ecatmaster</DependentUpon>
+      <AssignedMotorNumber>-1</AssignedMotorNumber>
+    </Content>
+    <Content Include="System\EtherCAT\274.ecatslave">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\Master0.ecatmaster</DependentUpon>
+      <AssignedMotorNumber>-1</AssignedMotorNumber>
+    </Content>
+    <Content Include="System\EtherCAT\275.ecatslave">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\Master0.ecatmaster</DependentUpon>
+      <AssignedMotorNumber>-1</AssignedMotorNumber>
+    </Content>
+    <Content Include="System\EtherCAT\276.ecatslave">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\Master0.ecatmaster</DependentUpon>
+      <AssignedMotorNumber>-1</AssignedMotorNumber>
+    </Content>
+    <Content Include="System\EtherCAT\277.ecatslave">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\Master0.ecatmaster</DependentUpon>
+      <AssignedMotorNumber>-1</AssignedMotorNumber>
+    </Content>
+    <Content Include="System\EtherCAT\278.ecatslave">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\Master0.ecatmaster</DependentUpon>
+      <AssignedMotorNumber>-1</AssignedMotorNumber>
+    </Content>
+    <Content Include="System\EtherCAT\279.ecatslave">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\Master0.ecatmaster</DependentUpon>
+      <AssignedMotorNumber>-1</AssignedMotorNumber>
+    </Content>
+    <Content Include="System\EtherCAT\280.ecatslave">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\Master0.ecatmaster</DependentUpon>
+      <AssignedMotorNumber>-1</AssignedMotorNumber>
+    </Content>
+    <Content Include="System\EtherCAT\281.ecatslave">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\Master0.ecatmaster</DependentUpon>
+      <AssignedMotorNumber>-1</AssignedMotorNumber>
+    </Content>
+    <Content Include="System\EtherCAT\282.ecatslave">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\Master0.ecatmaster</DependentUpon>
+      <AssignedMotorNumber>-1</AssignedMotorNumber>
+    </Content>
+    <Content Include="System\EtherCAT\283.ecatslave">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\Master0.ecatmaster</DependentUpon>
+      <AssignedMotorNumber>-1</AssignedMotorNumber>
+    </Content>
+    <Content Include="System\EtherCAT\284.ecatslave">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\Master0.ecatmaster</DependentUpon>
+      <AssignedMotorNumber>-1</AssignedMotorNumber>
+    </Content>
+    <Content Include="System\EtherCAT\285.ecatslave">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\Master0.ecatmaster</DependentUpon>
+      <AssignedMotorNumber>-1</AssignedMotorNumber>
+    </Content>
+    <Content Include="System\EtherCAT\286.ecatslave">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\Master0.ecatmaster</DependentUpon>
+      <AssignedMotorNumber>-1</AssignedMotorNumber>
+    </Content>
+    <Content Include="System\EtherCAT\287.ecatslave">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\Master0.ecatmaster</DependentUpon>
+      <AssignedMotorNumber>-1</AssignedMotorNumber>
+    </Content>
+    <Content Include="System\EtherCAT\288.ecatslave">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\Master0.ecatmaster</DependentUpon>
+      <AssignedMotorNumber>-1</AssignedMotorNumber>
+    </Content>
+    <Content Include="System\EtherCAT\288{001 Module 1 %28NX-AD3608%29.ecatmodule">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\288.ecatslave</DependentUpon>
+    </Content>
+    <Content Include="System\EtherCAT\288{002 Module 2 %28NX-AD3608%29.ecatmodule">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\288.ecatslave</DependentUpon>
+    </Content>
+    <Content Include="System\EtherCAT\288{003 Module 3 %28NX-AD3608%29.ecatmodule">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\288.ecatslave</DependentUpon>
+    </Content>
+    <Content Include="System\EtherCAT\288{004 Module 4 %28NX-AD3608%29.ecatmodule">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\288.ecatslave</DependentUpon>
+    </Content>
+    <Content Include="System\EtherCAT\288{005 Module 5 %28NX-AD3608%29.ecatmodule">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\288.ecatslave</DependentUpon>
+    </Content>
+    <Content Include="System\EtherCAT\288{006 Module 6 %28NX-AD3608%29.ecatmodule">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\288.ecatslave</DependentUpon>
+    </Content>
+    <Content Include="System\EtherCAT\288{007 Module 7 %28NX-AD3608%29.ecatmodule">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\288.ecatslave</DependentUpon>
+    </Content>
+    <Content Include="System\EtherCAT\288{008 Module 8 %28NX-PD1000%29.ecatmodule">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\288.ecatslave</DependentUpon>
+    </Content>
+    <Content Include="System\EtherCAT\288{009 Module 9 %28NX-ID5342%29.ecatmodule">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\288.ecatslave</DependentUpon>
+    </Content>
+    <Content Include="System\EtherCAT\288{010 Module 10 %28NX-ID5342%29.ecatmodule">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\288.ecatslave</DependentUpon>
+    </Content>
+    <Content Include="System\EtherCAT\288{011 Module 11 %28NX-ID5342%29.ecatmodule">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\288.ecatslave</DependentUpon>
+    </Content>
+    <Content Include="System\EtherCAT\288{012 Module 12 %28NX-ID5342%29.ecatmodule">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\288.ecatslave</DependentUpon>
+    </Content>
+    <Content Include="System\EtherCAT\288{013 Module 13 %28NX-OD5121%29.ecatmodule">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\288.ecatslave</DependentUpon>
+    </Content>
+    <Content Include="System\EtherCAT\288{014 Module 14 %28NX-OD5121%29.ecatmodule">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\288.ecatslave</DependentUpon>
+    </Content>
+    <Content Include="System\EtherCAT\288{015 Module 15 %28NX-OD5121%29.ecatmodule">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\288.ecatslave</DependentUpon>
+    </Content>
+    <Content Include="System\EtherCAT\288{016 Module 16 %28NX-OD5121%29.ecatmodule">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\288.ecatslave</DependentUpon>
+    </Content>
+    <Content Include="System\EtherCAT\289.ecatslave">
+      <SubType>Content</SubType>
+      <DependentUpon>System\EtherCAT\Master0.ecatmaster</DependentUpon>
+      <AssignedMotorNumber>-1</AssignedMotorNumber>
+    </Content>
+    <None Include="System\Hardware\CK3W-AX1515[3].hwsetup">
+      <SubType>Content</SubType>
+    </None>
+    <None Include="System\Hardware\CK3W-AX1515[2].hwsetup">
+      <SubType>Content</SubType>
+    </None>
+    <None Include="System\Hardware\CK3W-AX1515[1].hwsetup">
+      <SubType>Content</SubType>
+    </None>
+    <None Include="System\Hardware\CK3W-AX1515[0].hwsetup">
+      <SubType>Content</SubType>
+    </None>
+    <Folder Include="C Language\" />
+    <Folder Include="C Language\Background Programs\" />
+    <Folder Include="C Language\Background Programs\capp1" />
+    <Compile Include="C Language\Background Programs\capp1\capp1.c" />
+    <Content Include="C Language\Background Programs\capp1\capp1.h" />
+    <Folder Include="C Language\CPLCs\" />
+    <Folder Include="C Language\CPLCs\bgcplc00" />
+    <Content Include="C Language\CPLCs\bgcplc00\bgcplc.c" />
+    <Folder Include="C Language\CPLCs\bgcplc01\" />
+    <Folder Include="C Language\CPLCs\rticplc" />
+    <Content Include="C Language\CPLCs\rticplc\rticplc.c" />
+    <Folder Include="C Language\Include" />
+    <Content Include="C Language\Include\pp_proj.h" />
+    <Folder Include="C Language\Libraries" />
+    <Folder Include="C Language\Realtime Routines" />
+    <Compile Include="C Language\CPLCs\bgcplc01\bgcplc01.c">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="C Language\Realtime Routines\usrcode.c" />
+    <Content Include="C Language\Realtime Routines\usrcode.h" />
+    <Folder Include="Configuration" />
+    <None Include="Configuration\pp_custom_save.cfg" />
+    <None Include="Configuration\pp_custom_save.tpl" />
+    <None Include="Configuration\pp_disable.txt" />
+    <None Include="Configuration\pp_inc_disable.txt" />
+    <None Include="Configuration\pp_inc_startup.txt" />
+    <None Include="Configuration\pp_save.cfg" />
+    <None Include="Configuration\pp_startup.txt" />
+    <None Include="Configuration\systemsetup.cfg" />
+    <Folder Include="Documentation" />
+    <Content Include="Documentation\note.txt" />
+    <Folder Include="Log" />
+    <None Include="Log\pp_error.log" />
+    <None Include="Log\pp_error_hist.log" />
+    <None Include="Log\pp_proj.log" />
+    <Folder Include="PMAC Script Language\" />
+    <Folder Include="PMAC Script Language\Global Includes" />
+    <None Include="PMAC Script Language\Global Includes\global definitions.pmh">
+      <DisplayOrder>1</DisplayOrder>
+    </None>
+    <Folder Include="PMAC Script Language\Kinematic Routines" />
+    <Folder Include="PMAC Script Language\Libraries" />
+    <None Include="PMAC Script Language\Libraries\timer.pmc">
+      <DisplayOrder>1</DisplayOrder>
+    </None>
+    <Folder Include="PMAC Script Language\Motion Programs" />
+    <None Include="PMAC Script Language\Motion Programs\prog1.pmc">
+      <DisplayOrder>0</DisplayOrder>
+    </None>
+    <Folder Include="PMAC Script Language\PLC Programs" />
+    <None Include="PMAC Script Language\PLC Programs\ECATEnablePLC.plc">
+      <DisplayOrder>0</DisplayOrder>
+    </None>
+    <Folder Include="System" />
+    <Folder Include="System\Hardware" />
+    <Folder Include="System\CPU" />
+    <None Include="System\CPU\System.cpusetup" />
+    <Folder Include="System\Motors" />
+    <Folder Include="System\Coordinate Systems" />
+    <Folder Include="System\Encoder" />
+    <None Include="System\Encoder\Encoder.encsetup" />
+    <Folder Include="System\EtherCAT" />
+    <None Include="System\EtherCAT\Master0.ecatmaster">
+      <IgnoreRevision>false</IgnoreRevision>
+      <UseEtherCATConfigurationTemplate>false</UseEtherCATConfigurationTemplate>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Target Name="Build">
+    <CompileTask Files="@(Compile)" OutputPath="$(OutputPath)" DebugSymbols="$(DebugSymbols)" ProjectPath="$(MSBuildProjectDirectory)" PPCPUType="$(PPCPUType)" RealtimeRoutinesBuildFlag="$(RealtimeRoutinesBuildFlag)" CustomCompileFlags="@(CustomCompile)" CustomLibraryFlags="@(CustomLibrary)" CustomMakeFilePath="@(CustomMakeFilePath)" />
+  </Target>
+  <Target Name="Rebuild">
+    <CompileTask Files="@(Compile)" OutputPath="$(OutputPath)" DebugSymbols="$(DebugSymbols)" ProjectPath="$(MSBuildProjectDirectory)" PPCPUType="$(PPCPUType)" RealtimeRoutinesBuildFlag="$(RealtimeRoutinesBuildFlag)" CustomCompileFlags="@(CustomCompile)" CustomLibraryFlags="@(CustomLibrary)" CustomMakeFilePath="@(CustomMakeFilePath)" />
+  </Target>
+  <Target Name="Clean">
+    <RemoveDir Directories="$(OutputPath)" />
+    <MakeDir Directories="$(OutputPath)" />
+  </Target>
+</Project>

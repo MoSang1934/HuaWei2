@@ -1,0 +1,47 @@
+/*For more information see notes.txt in the Documentation folder */
+
+open plc ECATEnablePLC
+local index=0;
+local result;
+EtherCAT_Slave_Status=0
+call Timer.sec(5)
+if(ECAT[0].Enable==0)
+{
+	while(ECAT[0].Enable!=0 || ECAT[0].MasterState!=2)
+	{}
+}
+
+if(ECAT[0].Enable==0 && ECAT[0].MasterState==2)
+{
+	while(index<17)
+	{
+	if(ECAT[0].MasterState==2)
+	{
+			result=1
+			result=ECATREGREADWRITE(0,index,1,$130,0,1)
+			call Timer.sec(0.1)
+			if(result==2)
+			{
+				EtherCAT_Slave_Status=(EtherCAT_Slave_Status<<1)+1
+			}
+			else
+			{
+				EtherCAT_Slave_Status=(EtherCAT_Slave_Status<<1)
+			}
+		}
+		index++;
+	}
+
+	if(EtherCAT_Slave_Status==$FFF)
+	{
+		ECAT[0].Enable=1
+		//enable plc EStopPLC
+		//enable plc AlarmReset
+	}
+	else
+	{
+		ECAT[0].Enable=0
+	}
+}
+disable plc ECATEnablePLC
+close

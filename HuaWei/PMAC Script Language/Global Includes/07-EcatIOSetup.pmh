@@ -1,0 +1,176 @@
+//ECAT AnalogInput
+ptr AD(29)->*;
+AD(0)-> ECAT[0].IO[4195].Data //气源1
+AD(1)-> ECAT[0].IO[4196].Data //气源2
+AD(2)-> ECAT[0].IO[4197].Data //移载压力变送器1
+AD(3)-> ECAT[0].IO[4198].Data //贴片压力变送器2
+AD(4)-> ECAT[0].IO[4199].Data //移载吸头
+AD(5)-> ECAT[0].IO[4200].Data //移载真空
+AD(6)-> ECAT[0].IO[4201].Data //蘸胶吸头
+AD(7)-> ECAT[0].IO[4202].Data //蘸胶真空
+AD(8)-> ECAT[0].IO[4203].Data //贴片吸头
+AD(9)-> ECAT[0].IO[4204].Data //贴片真空
+AD(10)-> ECAT[0].IO[4205].Data //2寸料盘1
+AD(11)-> ECAT[0].IO[4206].Data //2存料盘2
+AD(12)-> ECAT[0].IO[4207].Data //中转台1
+AD(13)-> ECAT[0].IO[4208].Data //中转台2
+AD(14)-> ECAT[0].IO[4209].Data //中转台3
+AD(15)-> ECAT[0].IO[4210].Data //中转台4
+AD(16)-> ECAT[0].IO[4211].Data //中转台5
+AD(17)-> ECAT[0].IO[4212].Data //中转台6
+AD(18)-> ECAT[0].IO[4213].Data //顶升模组1
+AD(19)-> ECAT[0].IO[4214].Data //顶升模组2
+AD(20)-> ECAT[0].IO[4215].Data //顶升模组3
+AD(21)-> ECAT[0].IO[4216].Data //顶升模组4
+AD(22)-> ECAT[0].IO[4217].Data //顶升模组5
+AD(23)-> ECAT[0].IO[4218].Data //顶升模组6
+AD(24)-> ECAT[0].IO[4236].Data //挂胶传感器//ECAT[0].IO[4219].Data //蘸胶测试板
+AD(25)->  ECAT[0].IO[4220].Data //温度计
+AD(26)-> ECAT[0].IO[4221].Data //湿度计
+AD(27)-> ECAT[0].IO[4222].Data
+AD(28)->ECAT[0].IO[4236].Data //挂胶传感器
+
+//ECAT output1   Slave_1016_NX_ECC203_1016_7182_1_OutputBit16bits
+M1000 -> ECAT[0].IO[90].Data.0 //三色灯-红
+M1001 -> ECAT[0].IO[90].Data.1 //三色灯-绿色
+M1002 -> ECAT[0].IO[90].Data.2 //三色灯-黄色
+M1003 -> ECAT[0].IO[90].Data.3 //蜂鸣器
+M1004 -> ECAT[0].IO[90].Data.4 //启动指示灯
+M1005 -> ECAT[0].IO[90].Data.5 //复位指示灯
+M1006 -> ECAT[0].IO[90].Data.6 //停止指示灯
+M1007 -> ECAT[0].IO[90].Data.7
+M1008 -> ECAT[0].IO[90].Data.8
+M1009 -> ECAT[0].IO[90].Data.9
+M1010 -> ECAT[0].IO[90].Data.10
+M1011 -> ECAT[0].IO[90].Data.11
+M1012 -> ECAT[0].IO[90].Data.12
+M1013 -> ECAT[0].IO[90].Data.13
+M1014 -> ECAT[0].IO[90].Data.14
+M1015 -> ECAT[0].IO[90].Data.15
+
+//output2    Slave_1016_NX_ECC203_1016_71A2_1_OutputBit16bits
+M1016 -> ECAT[0].IO[91].Data.0 //皮带气缸伸出
+M1017 -> ECAT[0].IO[91].Data.1 //皮带线气缸缩回
+M1018 -> ECAT[0].IO[91].Data.2 //顶升吸真空1
+M1019 -> ECAT[0].IO[91].Data.3 //顶升吸真空2
+M1020 -> ECAT[0].IO[91].Data.4 //顶升吸真空3
+M1021 -> ECAT[0].IO[91].Data.5 //顶升吸真空4
+M1022 -> ECAT[0].IO[91].Data.6 //顶升吸真空5
+M1023 -> ECAT[0].IO[91].Data.7 //顶升吸真空6
+M1024 -> ECAT[0].IO[91].Data.8 //中转台吸真空1
+M1025 -> ECAT[0].IO[91].Data.9 //中转台破真空1
+M1026 -> ECAT[0].IO[91].Data.10 //中转台吸真空2
+M1027 -> ECAT[0].IO[91].Data.11	//中转台破真空2
+M1028 -> ECAT[0].IO[91].Data.12 //中转台吸真空3
+M1029 -> ECAT[0].IO[91].Data.13	//中转台破真空3
+M1030 -> ECAT[0].IO[91].Data.14 //中转台吸真空4
+M1031 -> ECAT[0].IO[91].Data.15	//中转台破真空4
+
+//output3  Slave_1016_NX_ECC203_1016_71C2_1_OutputBit16bits
+M1032 -> ECAT[0].IO[92].Data.0 //中转台吸真空5
+M1033 -> ECAT[0].IO[92].Data.1	//中转台破真空5
+M1034 -> ECAT[0].IO[92].Data.2 //中转台吸真空6
+M1035 -> ECAT[0].IO[92].Data.3	//中转台破真空6
+M1036 -> ECAT[0].IO[92].Data.4 //蘸胶测试版吸真空
+M1037 -> ECAT[0].IO[92].Data.5 //移载吸头吸真空
+M1038 -> ECAT[0].IO[92].Data.6 //移载产品吸真空
+M1039 -> ECAT[0].IO[92].Data.7 //移载产品破真空
+M1040 -> ECAT[0].IO[92].Data.8 //蘸胶吸头吸真空
+M1041 -> ECAT[0].IO[92].Data.9 //蘸胶产品吸真空
+M1042 -> ECAT[0].IO[92].Data.10 //蘸胶产品破真空
+M1043 -> ECAT[0].IO[92].Data.11 //贴片吸头吸真空
+M1044 -> ECAT[0].IO[92].Data.12 //贴片产品吸真空
+M1045 -> ECAT[0].IO[92].Data.13 //贴片产品破真空
+M1046 -> ECAT[0].IO[92].Data.14 //料盘吸真空1
+M1047 -> ECAT[0].IO[92].Data.15 //料盘吸真空2
+
+//output4   Slave_1016_NX_ECC203_1016_71E2_1_OutputBit16bits
+M1048 -> ECAT[0].IO[93].Data.0
+M1049 -> ECAT[0].IO[93].Data.1
+M1050 -> ECAT[0].IO[93].Data.2
+M1051 -> ECAT[0].IO[93].Data.3
+M1052 -> ECAT[0].IO[93].Data.4
+M1053 -> ECAT[0].IO[93].Data.5
+M1054 -> ECAT[0].IO[93].Data.6
+M1055 -> ECAT[0].IO[93].Data.7
+M1056 -> ECAT[0].IO[93].Data.8
+M1057 -> ECAT[0].IO[93].Data.9
+M1058 -> ECAT[0].IO[93].Data.10
+M1059 -> ECAT[0].IO[93].Data.11
+M1060 -> ECAT[0].IO[93].Data.12
+M1061 -> ECAT[0].IO[93].Data.13
+M1062 -> ECAT[0].IO[93].Data.14
+M1063 -> ECAT[0].IO[93].Data.15
+
+//ECAT Input1   Slave_1016_NX_ECC203_1016_6102_1_InputBit16bits
+M1100 -> ECAT[0].IO[4223].Data.0 //启动
+M1101 -> ECAT[0].IO[4223].Data.1 //复位（正面）
+M1102 -> ECAT[0].IO[4223].Data.2 //停止
+M1103 -> ECAT[0].IO[4223].Data.3 //手动
+M1104 -> ECAT[0].IO[4223].Data.4 //急停
+M1105 -> ECAT[0].IO[4223].Data.5 //复位（正面）
+M1106 -> ECAT[0].IO[4223].Data.6
+M1107 -> ECAT[0].IO[4223].Data.7
+M1108 -> ECAT[0].IO[4223].Data.8 //安全门（前1）
+M1109 -> ECAT[0].IO[4223].Data.9 //安全门（前2）
+M1110 -> ECAT[0].IO[4223].Data.10 //安全门（后1）
+M1111 -> ECAT[0].IO[4223].Data.11 //安全门（后2）
+M1112 -> ECAT[0].IO[4223].Data.12 //安全门（左1）
+M1113 -> ECAT[0].IO[4223].Data.13 //安全门（左2）
+M1114 -> ECAT[0].IO[4223].Data.14 //安全门（右1）
+M1115 -> ECAT[0].IO[4223].Data.15 //安全门（右2）
+
+ //ECAT Input2   Slave_1016_NX_ECC203_1016_6122_1_InputBit16bits
+M1116 -> ECAT[0].IO[4224].Data.0 //流水线进料
+M1117 -> ECAT[0].IO[4224].Data.1 //流水线拉料
+M1118 -> ECAT[0].IO[4224].Data.2 //流水线顶升（光纤）
+M1119 -> ECAT[0].IO[4224].Data.3 //流水线到位
+M1120 -> ECAT[0].IO[4224].Data.4
+M1121 -> ECAT[0].IO[4224].Data.5
+M1122 -> ECAT[0].IO[4224].Data.6
+M1123 -> ECAT[0].IO[4224].Data.7
+M1124 -> ECAT[0].IO[4224].Data.8 //皮带线进料
+M1125 -> ECAT[0].IO[4224].Data.9 //皮带线到位
+M1126 -> ECAT[0].IO[4224].Data.10 //皮带线到位2
+M1127 -> ECAT[0].IO[4224].Data.11 //皮带线出料
+M1128 -> ECAT[0].IO[4224].Data.12 //皮带线气缸伸出
+M1129 -> ECAT[0].IO[4224].Data.13 //皮带线气缸缩回
+M1130 -> ECAT[0].IO[4224].Data.14 
+M1131 -> ECAT[0].IO[4224].Data.15
+
+//ECAT Input3   Slave_1016_NX_ECC203_1016_6142_1_InputBit16bits
+M1132 -> ECAT[0].IO[4225].Data.0 //夹爪加紧
+M1133 -> ECAT[0].IO[4225].Data.1 //移载DD马达原点
+M1134 -> ECAT[0].IO[4225].Data.2 //蘸胶DD马达原点
+M1135 -> ECAT[0].IO[4225].Data.3 //贴片DD马达原点
+M1136 -> ECAT[0].IO[4225].Data.4
+M1137 -> ECAT[0].IO[4225].Data.5
+M1138 -> ECAT[0].IO[4225].Data.6
+M1139 -> ECAT[0].IO[4225].Data.7
+M1140 -> ECAT[0].IO[4225].Data.8
+M1141 -> ECAT[0].IO[4225].Data.9
+M1142 -> ECAT[0].IO[4225].Data.10
+M1143 -> ECAT[0].IO[4225].Data.11
+M1144 -> ECAT[0].IO[4225].Data.12
+M1145 -> ECAT[0].IO[4225].Data.13
+M1146 -> ECAT[0].IO[4225].Data.14
+M1147 -> ECAT[0].IO[4225].Data.15
+
+//ECAT Input4   Slave_1016_NX_ECC203_1016_6162_1_InputBit16bits
+M1148 -> ECAT[0].IO[4226].Data.0
+M1149 -> ECAT[0].IO[4226].Data.1
+M1150 -> ECAT[0].IO[4226].Data.2
+M1151 -> ECAT[0].IO[4226].Data.3
+M1152 -> ECAT[0].IO[4226].Data.4
+M1153 -> ECAT[0].IO[4226].Data.5
+M1154 -> ECAT[0].IO[4226].Data.6
+M1155 -> ECAT[0].IO[4226].Data.7
+M1156 -> ECAT[0].IO[4226].Data.8
+M1157 -> ECAT[0].IO[4226].Data.9
+M1158 -> ECAT[0].IO[4226].Data.10
+M1159 -> ECAT[0].IO[4226].Data.11
+M1160 -> ECAT[0].IO[4226].Data.12
+M1161 -> ECAT[0].IO[4226].Data.13
+M1162 -> ECAT[0].IO[4226].Data.14
+M1163 -> ECAT[0].IO[4226].Data.15
+

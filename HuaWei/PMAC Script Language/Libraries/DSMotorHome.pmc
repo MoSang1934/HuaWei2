@@ -1,0 +1,140 @@
+open subprog DSMotorHome(motor_num,homevel,polarity)
+local index;
+Ldata.motor=motor_num;
+index=motor_num;
+DS_RESET=1
+Call Timer.sec(0.5)
+DS_RESET=0
+Motor[index].HomeVel=-abs(homevel);
+Motor[21].HomeOffset=-1000
+Motor[21].MaxPos=0
+Motor[21].MinPos=0
+Call Timer.sec(0.5)
+	switch(HomeStatus(index))
+	{
+		case 0:
+		if(Motor[index].PlusLimit==1)
+		{
+			HomeStatus(index)=4;
+		}
+		else
+		{
+			HomeStatus(index)=1;
+		}
+		break;
+		case 1:
+			jog/
+			Call Timer.sec(0.1)
+			HTimer(index)=Sys.Time;
+			HomeStatus(index)=2;
+		break;
+		case 2:
+			if((Sys.Time-HTimer(index))<5 && Motor[index].AmpEna!=1)
+			{
+				HomeStatus(index)=2
+				jog/
+				Call Timer.sec(0.1)
+			}
+			else if((Sys.Time-HTimer(index))<5 && Motor[index].AmpEna==1)
+			{
+				jog+
+				HomeStatus(index)=3
+			}
+			else
+			{
+				HomeStatus(index)=255
+			}
+		break;
+		case 3:
+			if((Sys.Time-HTimer(index))<20 && Motor[index].PlusLimit!=1)
+			{
+				HomeStatus(index)=3
+				Call Timer.sec(0.1)
+			}
+			else if((Sys.Time-HTimer(index))<20 && Motor[index].PlusLimit==1)
+			{
+				Gate3[1].Chan[1].CaptFlagSel = 1//正限位
+				Gate3[1].Chan[1].CaptCtrl=10//10
+				Call Timer.sec(0.1)
+				HomeStatus(index)=7
+			}
+			else
+			{
+				HomeStatus(index)=255
+			}
+		break;
+		case 4:
+			jog/
+			Call Timer.sec(0.1)
+			HTimer(index)=Sys.Time;
+			HomeStatus(index)=5;
+		break;
+		case 5:
+			if((Sys.Time-HTimer(index))<5 && Motor[index].AmpEna!=1)
+			{
+				HomeStatus(index)=5
+				jog/
+				Call Timer.sec(0.1)
+			}
+			else if((Sys.Time-HTimer(index))<5 && Motor[index].AmpEna==1)
+			{
+				HomeStatus(index)=6
+			}
+			else
+			{
+				HomeStatus(index)=255
+			}
+		break;
+		case 6:
+				Gate3[1].Chan[1].CaptFlagSel = 1//正限位
+				Gate3[1].Chan[1].CaptCtrl=10//2(高)
+				Call Timer.sec(2)
+				HomeStatus(index)=7;
+		break;
+		case 7:
+			home
+			HTimer(index)=Sys.Time;
+			Call Timer.sec(0.1)
+			if(Motor[index].HomeInProgress==1)
+			{
+			HomeStatus(index)=8;
+			}
+			else if(Motor[index].HomeComplete!=1)
+			{
+			HomeStatus(index)=7;
+			}
+			else
+			{
+			HomeStatus(index)=8;
+			}
+		break;
+		case 8:
+			if((Sys.Time-HTimer(index))<120 && Motor[index].HomeComplete!=1)
+			{
+				HomeStatus(index)=8
+			}
+			else if((Sys.Time-HTimer(index))<120 && Motor[index].HomeComplete==1)
+			{
+				HomeStatus(index)=9
+			}
+			else
+			{
+				HomeStatus(index)=255
+			}
+		break;
+		case 9:
+		    call Timer.sec(2)
+			Motor[21].MaxPos=500
+			Motor[21].MinPos=-72000
+			HomeStatus(index)=254
+			HomeStatus(index)=0
+			HomeMotor(index)=0
+		break;
+		case 255:
+			HomeMotor(index)=0
+		break;
+		default:
+		break;
+	}
+   return;
+close
